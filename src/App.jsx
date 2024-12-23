@@ -72,6 +72,7 @@ function App() {
     <>
       <div></div>
       <h1>deep-object-diff</h1>
+      <p>Diff JSON objects quickly. A gui for <a href="https://www.npmjs.com/package/deep-object-diff" target="_blank" rel="noopener noreferrer">deep-object-diff</a>.</p>
       <div className="card">
         <form action="javascript:void(0)" ref={formRef}>
           <fieldset className="diff-fieldset">

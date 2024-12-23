@@ -45,7 +45,7 @@ function App() {
   const renderCodeBlock = (
     data,
     {
-      defaultInspectDepth = 2,
+      defaultInspectDepth = 6,
       maxDisplayLength = 30,
       groupArraysAfterLength = 100,
       ...otherProps
@@ -54,12 +54,12 @@ function App() {
     if (!!data && Object.keys(data).length !== 0) {
       return (
         <JsonViewer
+        theme="auto"
           defaultInspectDepth={defaultInspectDepth}
           displayDataTypes={false}
           displaySize={false}
           groupArraysAfterLength={groupArraysAfterLength}
           maxDisplayLength={maxDisplayLength}
-          theme="dark"
           value={data}
           {...otherProps}
         />
@@ -76,11 +76,11 @@ function App() {
         <form action="javascript:void(0)" ref={formRef}>
           <fieldset className="diff-fieldset">
             <label>
-              <span>Original Value</span>
+              <span>Original object</span>
               <textarea name="originalData" rows="15" />
             </label>
             <label>
-              <span>Changed Data Value</span>
+              <span>Changed object</span>
               <textarea name="changedData" rows="15" />
             </label>
           </fieldset>
